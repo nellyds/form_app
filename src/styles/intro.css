@@ -1,0 +1,53 @@
+.intro{
+    background-color: #152033;
+    min-height: 200px;
+}
+.introHeadline{
+    font-weight: bold;
+    font-family: 'PT Serif';
+    color: white;
+    margin: 10px;
+    font-size: 3.25em;
+}
+.introDetails{
+    color: white;
+    margin-left: 20px;
+    font-size: 1.75em;
+}
+li{
+    list-style-type: none;
+    color: white;
+    font-size: .9em;
+}
+
+.bullet{
+    color: rgb(54,108,237);
+    font-size: .7em;
+}
+  @media screen and (max-width: 415px){
+    .introContainer{
+        display: flex;
+        flex-direction: column; 
+        width: 90%;
+        margin-left: 5%;
+    }
+  }
+  @media screen and (min-width: 416px) and (max-width: 1100px){
+
+    .introContainer{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+  }
+  @media screen and (min-width: 1101px){
+    .introContainer{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+  }

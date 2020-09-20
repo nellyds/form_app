@@ -1,9 +1,9 @@
 import React from 'react';
-import OrderConfirmation from "../components/orderConfirmation";
+import OrderComplete from "../components/orderComplete";
 function ConfirmationPage(){
     return(
         <div>
-            <OrderConfirmation />
+            <OrderComplete />
         </div>
     )
 }

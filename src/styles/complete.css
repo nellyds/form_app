@@ -1,0 +1,48 @@
+.complete{
+    background-color: rgba(37,190,138,.15);
+}
+.completeHeadline{
+    font-weight: bold;
+}
+.completeIntro{
+    font-weight: bold;
+    font-size: 24px;
+    margin: 10px;
+}
+.completeBanner{
+    font-weight: bold;
+    font-family: 'PT Serif';
+    text-align: center;
+}
+.completeDetails{
+    margin: 5px;
+    width: 250px;
+}
+  @media screen and (max-width: 415px){
+    .complete{
+        width: 90%;
+        margin: 5%;
+    }
+    .completeDetails{
+        
+    }
+  }
+  @media screen and (min-width: 416px) and (max-width: 1100px){
+    .complete{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin-top: 10%;
+        margin-left: 10%;
+
+    }
+  }
+  @media screen and (min-width: 1101px){
+    .complete{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+  }

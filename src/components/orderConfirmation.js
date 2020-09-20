@@ -15,34 +15,34 @@ function OrderConfirmation() {
     //validate address against smartstreets API
     const validateAddress = async () => {
 
-        setMessage(true)
-        history.push('/confirm')
-        // console.log('reached')
-        // setProcessing(true)
-        // let streetQuery = order.streetAddress + " " + order.city + " " + order.stateAddress + " " + order.zipCode
-        // console.log(streetQuery)
-        // let response = await axios.get('https://us-street.api.smartystreets.com/street-address', {
-        //     params: {
-        //         street: streetQuery,
-        //         key: "17303761601010098"
-        //     }
-        // }).catch(error => {
-        //     console.log(error.message)
-        // })
-        // //if the address string produces any matching results, the address is valid and the order is stored in the 
-        // //appContext and the app navigates to the confirmation page
-        // console.log(response.data)
-        // if (response.data.length > 0) {
-        //     setProcessing(false)
-        //     history.push('/confirm');
-        // } else {
-        //     setProcessing(false)
-        //     setMessage('Invalid Address, please check all fields!')
-        // }
+        // setMessage(true)
+        // history.push('/confirm')
+        console.log('reached')
+        setProcessing(true)
+        let streetQuery = order.streetAddress + " " + order.city + " " + order.stateAddress + " " + order.zipCode
+        console.log(streetQuery)
+        let response = await axios.get('https://us-street.api.smartystreets.com/street-address', {
+            params: {
+                street: streetQuery,
+                key: "17303761601010098"
+            }
+        }).catch(error => {
+            console.log(error.message)
+        })
+        //if the address string produces any matching results, the address is valid and the order is stored in the 
+        //appContext and the app navigates to the confirmation page
+        console.log(response.data)
+        if (response.data.length > 0) {
+            setProcessing(false)
+            history.push('/confirm');
+        } else {
+            setProcessing(false)
+            setMessage('Invalid Address, please check all fields!')
+        }
 
     }
     return (
-        <div>
+        <div class="confirmationContainer">
             <ScrollAnimation animateIn="fadeInRight">
                 <p class="confirmHeader">Just a second...</p>
                 <div class="confirmationForm">
@@ -53,7 +53,7 @@ function OrderConfirmation() {
                         <p class="orderConfirm"> Name :
                         <span class="orderDetail"> {order.customerName} </span></p>
                         <p class="orderConfirm" > Email:  <span class="orderDetail"> {order.email} </span> </p>
-                        <p class="orderConfirm"> Phone No.: 
+                        <p class="orderConfirm"> Phone No.:
                         <span class="orderDetail"> {order.phoneNumber} </span>
                         </p>
                         <p class="orderConfirm"> Address : </p>

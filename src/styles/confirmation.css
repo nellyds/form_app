@@ -2,7 +2,10 @@
     font-weight: bold;
     font-size: 24px;
 }
-
+.confirmationContainer{
+    width: 100%;
+    padding: 20px;
+}
 .orderConfirm{
     font-size: 20px;
 }
@@ -14,7 +17,6 @@
 }
 .orderDetail{
     font-style: italic;
-
 }
 .message{
     color: rgb(180,26,26);
@@ -22,7 +24,8 @@
     font-size: 18px;
   }
 .confirmQuestion{
-    border: solid 2px black;
+    margin: 10px;
+    font-weight: bold;
 }
 .details{
     background-color: rgba(112,218,255,.15);

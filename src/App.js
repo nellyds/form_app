@@ -1,5 +1,5 @@
 import React, { useContext, useState, useMemo }from 'react';
-import './App.css';
+import './styles/App.css';
 
 import OrderPage from './pages/OrderPage';
 import ConfirmationPage from './pages/ConfirmationPage';

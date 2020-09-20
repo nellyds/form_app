@@ -7,7 +7,11 @@
     padding: 10px;
     border-radius: 5px;
   }
-  
+  .orderContainer{
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+  }
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -22,7 +26,10 @@
     margin-right: 2rem;
     padding-right: 2rem;
   }
-  
+  .checkInput{
+    margin: 2px;
+    border: solid 2px black;
+  }
   form{
     margin: 15px;
   }
@@ -33,6 +40,7 @@
   }
   .inputLabel{
     margin: 5px;
+
   }
   .submitButton{
     color: white;
@@ -48,7 +56,6 @@
   .submitButton:hover{
     background-color: rgba(54,108,237, .8);
   }
-
 
 @media screen and (max-width: 415px){
     .orderForm{
