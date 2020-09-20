@@ -1,4 +1,5 @@
 export const stateList = [
+    '...',
  'Alabama',
 'Alaska',
 'American Samoa',

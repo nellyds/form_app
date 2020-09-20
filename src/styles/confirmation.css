@@ -1,0 +1,52 @@
+.confirmHeader{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.orderConfirm{
+    font-size: 20px;
+}
+.productOrder{
+    border: solid 2px #434C5E;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 5px;    
+}
+.orderDetail{
+    font-style: italic;
+
+}
+.message{
+    color: rgb(180,26,26);
+    font-weight: bold;
+    font-size: 18px;
+  }
+.confirmQuestion{
+    border: solid 2px black;
+}
+.details{
+    background-color: rgba(112,218,255,.15);
+    width: 350px;
+    padding: 5px;
+}
+
+  @media screen and (max-width: 415px){
+    .confirmationForm{
+
+        border: solid 2px blue;
+    }
+  }
+  @media screen and (min-width: 416px) and (max-width: 1100px){
+    .confirmationForm{
+        display: flex;
+        flex-direction: row;
+        border: solid 2px red;
+    }
+  }
+  @media screen and (min-width: 1101px){
+    .confirmationForm{
+        display: flex;
+        flex-direction: row;
+
+    }
+  }
