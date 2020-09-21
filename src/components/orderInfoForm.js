@@ -35,7 +35,9 @@ function UserInfoForm(props) {
                                 type="text"
                                 style={{ border: errors.customerName && "solid 3px rgb(180,26,26)" }}
                                 aria-invalid={errors.name ? "true" : "false"}
-                                placeholder="Customer Name" name="customerName" ref={register({ required: true, maxLength: 80 })} />
+                                placeholder="Customer Name" name="customerName" ref={register({ required: true, maxLength: 80,
+                                    pattern: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/
+                                })} />
                             {errors.customerName && <p class="error">Invalid name.  Please re-enter this field.</p>}
                         </div>
                         <div>
@@ -66,7 +68,7 @@ function UserInfoForm(props) {
                                 aria-required="true"
                                 aria-invalid={errors.name ? "true" : "false"}
                                 style={{ border: errors.streetAddress && "solid 3px rgb(180,26,26)" }}
-                                name="streetAddress" ref={register({ required: true, min: 9, max: 40 })} />
+                                name="streetAddress" ref={register({ required: true, min: 9, max: 40, pattern:  /^[#.0-9a-zA-Z\s,-]+$/ })} />
                             {errors.streetAddress && <p class="error">Invalid street address.  Please re-enter this field.</p>}
                         </div>
                         <div>

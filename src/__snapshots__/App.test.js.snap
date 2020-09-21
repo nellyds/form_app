@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders CompletePage without crashing 1`] = `"{\\"_reactInternalInstance\\":\\"censored\\"}"`;
+
 exports[`renders Confirmation Page without crashing 1`] = `"{\\"_reactInternalInstance\\":\\"censored\\"}"`;
 
 exports[`renders Confirmation Page without crashing 2`] = `"{\\"_reactInternalInstance\\":\\"censored\\"}"`;
@@ -7,6 +9,8 @@ exports[`renders Confirmation Page without crashing 2`] = `"{\\"_reactInternalIn
 exports[`renders Order Page without crashing 1`] = `"{\\"_reactInternalInstance\\":\\"censored\\"}"`;
 
 exports[`renders Order page without crashing 1`] = `"{\\"_reactInternalInstance\\":\\"censored\\"}"`;
+
+exports[`renders OrderPage without crashing 1`] = `"{\\"_reactInternalInstance\\":\\"censored\\"}"`;
 
 exports[`renders app without crashing 1`] = `"{\\"_reactInternalInstance\\":\\"censored\\"}"`;
 
