@@ -1,4 +1,4 @@
-import React, { useState, useMemo }from 'react';
+import React, { useContext, useState, useMemo }from 'react';
 import './styles/App.css';
 
 import OrderPage from './pages/OrderPage';

@@ -6,7 +6,7 @@ import "../styles/confirmation.css";
 import axios from 'axios';
 function OrderConfirmation() {
     //retrieve order from application context
-    const { order, setOrder } = useContext(AppContext)
+    const { order } = useContext(AppContext)
     //retrieves history object from router for navigation
     const history = useHistory();
     //set state for error messages and a loading boolean
@@ -17,6 +17,7 @@ function OrderConfirmation() {
 
         // setMessage(true)
         // history.push('/confirm')
+        console.log('reached')
         setProcessing(true)
         let streetQuery = order.streetAddress + " " + order.city + " " + order.stateAddress + " " + order.zipCode
         console.log(streetQuery)
@@ -33,7 +34,6 @@ function OrderConfirmation() {
         console.log(response.data)
         if (response.data.length > 0) {
             setProcessing(false)
-            setOrder(order)
             history.push('/confirm');
         } else {
             setProcessing(false)
@@ -71,7 +71,7 @@ function OrderConfirmation() {
                 <button class="submitButton" onClick={validateAddress} type="submit" label="submit" > Confirm your order </button>
             </ScrollAnimation>
             {processing ?
-                <p > Processing... </p>
+                <p style="font-style=italic" > Processing... </p>
                 : null
             }
             {message
