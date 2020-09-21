@@ -1,3 +1,3 @@
-import React, {useState, createContext} from 'react'
+import {createContext} from 'react'
 
 export const AppContext = createContext();

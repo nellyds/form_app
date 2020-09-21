@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { stateList } from "../util/constants"
-import { useHistory } from "react-router-dom";
 import { AppContext } from "../AppContext";
 import OrderConfirmation from "./orderConfirmation"
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -11,11 +10,8 @@ import "../styles/orderForm.css"
 function UserInfoForm(props) {
     //configure form-hook
     const { register, handleSubmit, errors } = useForm({ mode: "onblur" });
-    const [processing, setProcessing] = useState(false)
-    const history = useHistory();
     //create state data
     const productList = ["Product A", "Product B", "Product C", "Product D"]
-    const [message, setMessage] = useState('')
     const [showConfirmation, toggleConfirm] = useState(false)
     //retrieves application context
     const { order, setOrder } = useContext(AppContext)

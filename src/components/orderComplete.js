@@ -4,6 +4,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import "../styles/complete.css";
 function OrderComplete() {
     const { order } = useContext(AppContext);
+
     // const order = {
     //     customerName: 'b',
     //     email: 'sdfsd',
@@ -16,6 +17,7 @@ function OrderComplete() {
     //         'that'
     //     ]
     // }
+    console.log(order)
     return (
         <div >
             <ScrollAnimation animateIn="fadeInDown">
