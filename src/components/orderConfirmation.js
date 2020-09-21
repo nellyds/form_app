@@ -6,7 +6,7 @@ import "../styles/confirmation.css";
 import axios from 'axios';
 function OrderConfirmation() {
     //retrieve order from application context
-    const { order } = useContext(AppContext)
+    const { order, setOrder } = useContext(AppContext)
     //retrieves history object from router for navigation
     const history = useHistory();
     //set state for error messages and a loading boolean
@@ -14,9 +14,6 @@ function OrderConfirmation() {
     const [message, setMessage] = useState(false)
     //validate address against smartstreets API
     const validateAddress = async () => {
-
-        // setMessage(true)
-        // history.push('/confirm')
         console.log('reached')
         setProcessing(true)
         let streetQuery = order.streetAddress + " " + order.city + " " + order.stateAddress + " " + order.zipCode
@@ -33,13 +30,13 @@ function OrderConfirmation() {
         //appContext and the app navigates to the confirmation page
         console.log(response.data)
         if (response.data.length > 0) {
+            setOrder(order)
             setProcessing(false)
             history.push('/confirm');
         } else {
             setProcessing(false)
             setMessage('Invalid Address, please check all fields!')
         }
-
     }
     return (
         <div class="confirmationContainer">
@@ -71,7 +68,7 @@ function OrderConfirmation() {
                 <button class="submitButton" onClick={validateAddress} type="submit" label="submit" > Confirm your order </button>
             </ScrollAnimation>
             {processing ?
-                <p style="font-style=italic" > Processing... </p>
+                <p > Processing... </p>
                 : null
             }
             {message

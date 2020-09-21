@@ -1,8 +1,8 @@
-import React, { useContext, useState, useMemo }from 'react';
+import React, { useState, useMemo }from 'react';
 import './styles/App.css';
 
 import OrderPage from './pages/OrderPage';
-import ConfirmationPage from './pages/ConfirmationPage';
+import CompletePage from './pages/CompletePage';
 import { Route} from 'react-router-dom'
 import { AppContext } from "./AppContext"
 function App() {
@@ -14,7 +14,7 @@ const value = useMemo(() =>({order, setOrder}), [order, setOrder])
     <div className="App">
       <AppContext.Provider value = {value}>
       <Route exact path="/" component = {OrderPage} />
-      <Route exact path="/confirm" component = {ConfirmationPage} />
+      <Route exact path="/confirm" component = {CompletePage} />
       </AppContext.Provider>
     </div>
   );

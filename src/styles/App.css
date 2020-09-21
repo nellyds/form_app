@@ -8,6 +8,7 @@
 
 .error{
   color: rgb(180,26,26);
+  text-align: center;
   font-style: italic;
   animation: fadeIn ease 1s;
 }

@@ -1,9 +1,20 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import CompletePage from "./pages/CompletePage";
+import OrderPage from "./pages/OrderPage";
+import { shallow } from 'enzyme';
+test('renders without crashing', () => {
+  expect(
+    JSON.stringify(
+      Object.assign({}, OrderPage, { _reactInternalInstance: 'censored' }),
+    ),
+  ).toMatchSnapshot();
+});
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders without crashing', () => {
+  expect(
+    JSON.stringify(
+      Object.assign({}, CompletePage, { _reactInternalInstance: 'censored' }),
+    ),
+  ).toMatchSnapshot();
 });
